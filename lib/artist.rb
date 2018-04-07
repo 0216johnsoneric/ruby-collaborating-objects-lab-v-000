@@ -31,4 +31,8 @@ class Artist
     self.all.find {|artist| artist.name == name }
   end
 
+  ef self.create(name)
+    self.new(name).tap {|artist| artist.save}
+  end
+  
 end
